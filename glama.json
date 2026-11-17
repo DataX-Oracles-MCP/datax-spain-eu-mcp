@@ -1,6 +1,7 @@
 {
   "$schema": "https://glama.ai/mcp/schemas/server.json",
   "maintainers": [
+    "DataX-Oracles-MCP",
     "sroque58-a11y"
   ]
 }
