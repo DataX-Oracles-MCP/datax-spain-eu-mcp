@@ -1,0 +1,35 @@
+{
+  "$schema": "https://static.modelcontextprotocol.io/schemas/2025-12-11/server.schema.json",
+  "name": "io.github.DataX-Oracles-MCP/datax-spain-eu-mcp",
+  "title": "DataX Spain & EU Official Registries",
+  "description": "Spain & EU registries MCP (BOE, BORME, BDNS, PLACSP, auctions, TED) with USDC/EURC.",
+  "version": "0.1.3",
+  "repository": {
+    "url": "https://github.com/DataX-Oracles-MCP/datax-spain-eu-mcp",
+    "source": "github"
+  },
+  "websiteUrl": "https://datax-es.duckdns.org/llms.txt",
+  "packages": [
+    {
+      "registryType": "oci",
+      "identifier": "ghcr.io/datax-oracles-mcp/datax-spain-eu-mcp:0.1.3",
+      "transport": {
+        "type": "stdio"
+      },
+      "environmentVariables": [
+        {
+          "name": "DATAX_BASE_URL",
+          "description": "Base URL of the DataX Truth Engine server.",
+          "format": "string",
+          "default": "https://datax-es.duckdns.org"
+        },
+        {
+          "name": "DATAX_TOKEN",
+          "description": "Optional unspent UTXO token (USDC or MiCA EURC) from /api/v1/issue-token for paid tools.",
+          "format": "string",
+          "isSecret": true
+        }
+      ]
+    }
+  ]
+}
